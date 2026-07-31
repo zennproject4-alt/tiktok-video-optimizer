@@ -19,7 +19,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],       # untuk development, nanti bisa dipersempit
+    allow_origins=[
+        "https://zenn-methods-ikqf.onrender.com",  # ganti sesuai URL asli kamu
+        "http://127.0.0.1:5500",  # opsional: kalau kamu pakai Live Server lokal untuk testing
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -169,13 +172,3 @@ def cleanup_files(file_id: str):
         raise HTTPException(status_code=404, detail="Tidak ada file yang ditemukan untuk file_id ini")
 
     return {"status": "ok", "deleted_files": deleted_files}
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "https://zenn-methods-ikqf.onrender.com",  # ganti sesuai URL asli kamu
-        "http://127.0.0.1:5500",  # opsional: kalau kamu pakai Live Server lokal untuk testing
-    ],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
