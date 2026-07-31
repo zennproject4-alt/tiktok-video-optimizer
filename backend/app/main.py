@@ -173,7 +173,7 @@ def cleanup_files(file_id: str):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://zenn-methods-frontend.onrender.com",  # ganti sesuai URL asli kamu
+        "https://zenn-methods-ikqf.onrender.com",  # ganti sesuai URL asli kamu
         "http://127.0.0.1:5500",  # opsional: kalau kamu pakai Live Server lokal untuk testing
     ],
     allow_methods=["*"],
