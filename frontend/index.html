@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>TikTok Video Optimizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TikTok Video Optimizer</h1>
+    <p class="subtitle">Optimasi container video tanpa mengubah isi visual</p>
+
+    <div class="upload-box" id="uploadBox">
+      <input type="file" id="fileInput" accept="video/mp4,video/quicktime,video/x-msvideo,video/x-matroska" hidden>
+      <button id="chooseFileBtn">Pilih Video</button>
+      <p id="fileName">Belum ada file dipilih</p>
+      <div class="progress-wrapper hidden" id="progressWrapper">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+    </div>
+
+    <button id="uploadBtn" disabled>Upload</button>
+
+    <div id="statusBox" class="status-box hidden"></div>
+
+    <div id="analysisBox" class="report-box hidden">
+  <h2>Analisis Video</h2>
+  <pre id="analysisContent"></pre>
+
+  <h2>Kompatibilitas TikTok</h2>
+  <div id="complianceOverall" class="compliance-overall"></div>
+  <ul id="complianceList" class="compliance-list"></ul>
+
+  <button id="optimizeBtn">Optimalkan Video</button>
+</div>
+
+    <div id="resultBox" class="report-box hidden">
+      <h2>Hasil Optimasi</h2>
+      <div class="compare">
+        <div>
+          <h3>Sebelum</h3>
+          <pre id="beforeContent"></pre>
+        </div>
+        <div>
+          <h3>Sesudah</h3>
+          <pre id="afterContent"></pre>
+        </div>
+      </div>
+      <button id="downloadBtn">Download Hasil</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

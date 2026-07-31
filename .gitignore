@@ -1,0 +1,20 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# FFmpeg binary (terlalu besar untuk di-commit, user harus download sendiri)
+ffmpeg/
+
+# File video hasil upload & output (data user, bukan source code)
+backend/app/uploads/*
+backend/app/outputs/*
+!backend/app/uploads/.gitkeep
+!backend/app/outputs/.gitkeep
+
+# Editor
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
